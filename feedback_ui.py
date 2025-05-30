@@ -360,6 +360,7 @@ class FeedbackUI(QMainWindow):
         # Short description label (from self.prompt)
         self.description_label = QLabel(self.prompt)
         self.description_label.setWordWrap(True)
+        self.description_label.setTextInteractionFlags(Qt.TextSelectableByMouse | Qt.TextSelectableByKeyboard)
         feedback_layout.addWidget(self.description_label)
 
         self.feedback_text = FeedbackTextEdit()
